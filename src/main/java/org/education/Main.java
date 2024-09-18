@@ -17,7 +17,7 @@ public class Main {
         PriorityQueueList priorityQueue = new PriorityQueueList();
         String fileName = "houses.txt";
 
-        // Load houses from file and add to the priority queue.
+        // Loading houses from file and add to the priority queue.
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String owner;
             String valueStr;
@@ -31,7 +31,7 @@ public class Main {
             return;
         }
 
-        // Print houses in the original queue (highest value first).
+        // Printing houses in the original queue (highest value first).
         System.out.println("Houses in the original queue (highest value first):");
         PriorityQueueList tempQueue = new PriorityQueueList(priorityQueue); // Temporary queue to display houses
         while (!tempQueue.isEmpty()) {
@@ -39,28 +39,28 @@ public class Main {
             System.out.println(house);
         }
 
-        // Print a dashed line to separate
+        // Printing a dashed line to separate
         System.out.println("--------------------------------------------");
 
-        // Print the original queue length before clearing.
+        // Printing the original queue length before clearing.
         System.out.println("Original queue length before clearing: " + priorityQueue.getLength());
         System.out.println("Is the original queue empty? " + priorityQueue.isEmpty());
 
-        // Print a dashed line to separate
+        // Printing a dashed line to separate
         System.out.println("--------------------------------------------");
 
-        // Copy and deep copy the queue.
+        // Copying and deep copy the queue.
         PriorityQueueList copiedQueue = new PriorityQueueList(priorityQueue);
         PriorityQueueList deepCopiedQueue = priorityQueue.deepCopy();
 
-        // Print lengths of copied and deep copied queues.
+        // Printing lengths of copied and deep copied queues.
         System.out.println("Length of the copied Queue: " + copiedQueue.getLength());
         System.out.println("Length of the Deep Copied Queue: " + deepCopiedQueue.getLength());
 
-        // Print a dashed line to separate
+        // Printing a dashed line to separate
         System.out.println("--------------------------------------------");
 
-        // Clear the original queue.
+        // Clearing the original queue.
         priorityQueue.clear();
         System.out.println("Original queue length after clearing: " + priorityQueue.getLength());
         System.out.println("Is the original queue empty? " + priorityQueue.isEmpty());
