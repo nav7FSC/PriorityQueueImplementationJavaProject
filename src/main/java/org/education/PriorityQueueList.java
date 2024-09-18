@@ -7,7 +7,7 @@ public class PriorityQueueList implements PriorityQueue {
     private Node head;
     private int length;
 
-    private class Node {
+    private static class Node {
         House house;
         Node next;
 
@@ -66,7 +66,6 @@ public class PriorityQueueList implements PriorityQueue {
     public House getMostExpensive() {
         if (head == null) return null;
 
-        Node prev = null;
         Node current = head;
         Node mostExpensive = head;
         Node mostExpensivePrev = null;
