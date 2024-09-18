@@ -39,19 +39,30 @@ public class Main {
             System.out.println(house);
         }
 
+        // Print a dashed line to separate
+        System.out.println("--------------------------------------------");
+
         // Print the original queue length before clearing.
         System.out.println("Original queue length before clearing: " + priorityQueue.getLength());
+        System.out.println("Is the original queue empty? " + priorityQueue.isEmpty());
+
+        // Print a dashed line to separate
+        System.out.println("--------------------------------------------");
 
         // Copy and deep copy the queue.
         PriorityQueueList copiedQueue = new PriorityQueueList(priorityQueue);
         PriorityQueueList deepCopiedQueue = priorityQueue.deepCopy();
 
         // Print lengths of copied and deep copied queues.
-        System.out.println("The length of the copied Queue: " + copiedQueue.getLength());
-        System.out.println("The Length of the Deep Copied Queue: " + deepCopiedQueue.getLength());
+        System.out.println("Length of the copied Queue: " + copiedQueue.getLength());
+        System.out.println("Length of the Deep Copied Queue: " + deepCopiedQueue.getLength());
+
+        // Print a dashed line to separate
+        System.out.println("--------------------------------------------");
 
         // Clear the original queue.
         priorityQueue.clear();
         System.out.println("Original queue length after clearing: " + priorityQueue.getLength());
+        System.out.println("Is the original queue empty? " + priorityQueue.isEmpty());
     }
 }
